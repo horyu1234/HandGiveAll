@@ -5,8 +5,6 @@ version = '10.7'
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
-sourceCompatibility = 1.8
-
 repositories {
     // Spigot
     maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
