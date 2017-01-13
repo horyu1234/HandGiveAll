@@ -1,0 +1,24 @@
+apply plugin: 'java'
+
+group = 'com.horyu1234'
+version = '10.7'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+sourceCompatibility = 1.8
+
+repositories {
+    // Spigot
+    maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
+    // Bungeecord
+    maven { url 'https://oss.sonatype.org/content/groups/public' }
+    // Vault
+    maven { url 'http://nexus.hc.to/content/repositories/pub_releases' }
+}
+
+dependencies {
+    compile 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+    compile('net.milkbowl.vault:Vault:1.4.1') {
+        transitive = false
+    }
+}
